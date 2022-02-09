@@ -1,0 +1,44 @@
+$orange: #57524a;
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+@mixin corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -khtml-border-radius: $radius;
+}
+body {
+  background-color: $orange;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+.container {
+  margin-top: 100px;
+}
+
+button {
+  @include corners(5px);
+  border: solid 1px white;
+  width: 150px;
+  padding: 18px 10px;
+  background-color: $orange;
+  color: white;
+  margin: 15px;
+  outline: none;
+
+  &:hover {
+    @include transition();
+    background-color: white;
+    color: orange;
+  }
+}

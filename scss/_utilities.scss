@@ -1,0 +1,21 @@
+%center {
+  text-align: center;
+}
+$main-color: #ebeae6;
+%btn {
+  background-color: #f57a08;
+  color: white;
+  border-radius: 7px;
+  font-size: 1.2em;
+  padding: 10px 20%;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  align-self: center;
+
+  &:hover {
+    transform: scale(0.98);
+    color: black;
+  }
+}
